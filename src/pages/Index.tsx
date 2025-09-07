@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -149,10 +150,12 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="bg-primary rounded-lg p-2">
-                <Icon name="Newspaper" size={24} className="text-primary-foreground" />
-              </div>
-              <h1 className="text-2xl font-bold">ContentHub</h1>
+              <Link to="/" className="flex items-center gap-3">
+                <div className="bg-primary rounded-lg p-2">
+                  <Icon name="Newspaper" size={24} className="text-primary-foreground" />
+                </div>
+                <h1 className="text-2xl font-bold">ContentHub</h1>
+              </Link>
             </div>
             
             <div className="flex-1 max-w-md mx-8">
@@ -204,37 +207,37 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center p-4">
+            <Link to="/news" className="text-center p-4 hover-lift rounded-lg transition-all">
               <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                 <Icon name="Newspaper" size={24} className="text-blue-600" />
               </div>
               <h3 className="font-semibold mb-2">Новости</h3>
               <p className="text-sm text-muted-foreground">Актуальные события</p>
-            </div>
+            </Link>
             
-            <div className="text-center p-4">
+            <Link to="/articles" className="text-center p-4 hover-lift rounded-lg transition-all">
               <div className="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                 <Icon name="FileText" size={24} className="text-green-600" />
               </div>
               <h3 className="font-semibold mb-2">Статьи</h3>
               <p className="text-sm text-muted-foreground">Глубокая аналитика</p>
-            </div>
+            </Link>
             
-            <div className="text-center p-4">
+            <Link to="/stories" className="text-center p-4 hover-lift rounded-lg transition-all">
               <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                 <Icon name="Book" size={24} className="text-purple-600" />
               </div>
               <h3 className="font-semibold mb-2">Рассказы</h3>
               <p className="text-sm text-muted-foreground">Истории и биографии</p>
-            </div>
+            </Link>
             
-            <div className="text-center p-4">
+            <Link to="/videos" className="text-center p-4 hover-lift rounded-lg transition-all">
               <div className="bg-red-100 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                 <Icon name="Video" size={24} className="text-red-600" />
               </div>
               <h3 className="font-semibold mb-2">Видео</h3>
               <p className="text-sm text-muted-foreground">Видеоконтент</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
